@@ -14,8 +14,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center font-noto-sans font-normal relative">
-      <ul className="flex flex-row gap-x-10 relative">
+    <nav className="w-[1520px] flex items-center justify-center font-noto-sans font-normal relative text-white clip-slant bg-[#111314] bg-opacity-[79%]">
+      <ul className="h-full flex flex-row items-center gap-x-10 relative">
         <li
           onMouseEnter={handleHover}
           className="relative"
@@ -46,11 +46,11 @@ export default function Navbar() {
         >
           Search
         </li>
+        <Selector 
+          left={selectorPosition.left}
+          width={selectorPosition.width}
+        />
       </ul>
-      <Selector 
-        left={selectorPosition.left}
-        width={selectorPosition.width}
-      />
     </nav>
   )
 }
