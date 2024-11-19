@@ -5,10 +5,8 @@ export default function Header() {
 
 
   return (
-    <header className="w-full h-[70px] flex justify-between">
-      <div></div>
+    <header className="w-full h-[70px] flex justify-center fixed top-0">
       <Navbar />
-      <div></div>
     </header>
   )
 }
