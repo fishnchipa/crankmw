@@ -1,9 +1,9 @@
 "use client"
 
-import Link from "next/link";
 import ArrowMark from "./ArrowMark";
 import HeadlineBackDrop from "./HeadlineBackDrop";
 import { motion } from "framer-motion";
+import Anchor from "./Anchor";
 
 const links = ["HOT PRODUCTS", "DOWNPIPES", "AIR INTAKES", "ENGINES", "RADIATORS", "DIFFUSERS"]
 
@@ -38,7 +38,7 @@ export default function Headline() {
               <hr className="h-[1px] border-0 bg-white mr-[50%]"/>
             </motion.div>
           </div>
-          <div className="h-[200px] mt-8 px-5 w-full md:w-[600px] md:px-0 leading-7 font-noto-sans md:mt-16 relative overflow-hidden">
+          <div className="h-[200px] mt-8 px-5 w-full md:w-[600px] md:px-0 leading-7 font-noto-sans md:mt-16 relative">
             <ArrowMark />
             <p>Crank Motor Werkes offer a wide range of services, including custom turbo kits, in-house parts, tuning packages, and dyno hire.  Whether you need turbo upgrades, custom tuning, or performance modifications, Crank Motor Werkes provides tailored solutions for serious power enthusiasts</p>
           </div>
@@ -46,13 +46,12 @@ export default function Headline() {
             {links.map(item => {
               return (
                 <li className="hover:text-[#4A4A4A]" key={item}>
-                  <Link href="/">{item}</Link>
+                  <Anchor href="/">{item}</Anchor>
                 </li>
               )
             })}
           </ul>
         </section>
-
     </div>
   )
 }
