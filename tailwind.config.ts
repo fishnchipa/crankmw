@@ -14,7 +14,11 @@ export default {
       },
       fontFamily: {
         "noto-sans": ["var(--noto_sans)"]
+      },
+      screens: {
+        "xsm": "550px"
       }
+
     },
   },
   plugins: [],
