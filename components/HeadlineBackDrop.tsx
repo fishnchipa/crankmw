@@ -7,7 +7,7 @@ export default function HeadlineBackDrop() {
       viewBox="0 0 1919 546" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute -z-10"
+      className="absolute -z-10 -translate-x-72 md:-translate-x-52 xl:translate-x-0 transition-all duration-300"
     >
       <g clipPath="url(#clip0_569_2)">
       <rect width="1920" height="546" transform="translate(-1)" fill="url(#paint0_linear_569_2)"/>
