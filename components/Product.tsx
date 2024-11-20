@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Anchor from "./Anchor";
 
 type ProductProps = {
   title: string
@@ -14,7 +14,7 @@ type ProductProps = {
 
 export default function Product({title, price, sale}: ProductProps) {
   return (
-    <Link 
+    <Anchor 
       className="flex flex-col items-center group text-center "
       href="/"
     >
@@ -46,6 +46,6 @@ export default function Product({title, price, sale}: ProductProps) {
           <span className={`${sale && "line-through font-normal"}`}>${price.toFixed(2)}</span>
         </div>
       </div>
-    </Link>
+    </Anchor>
   )
 }
