@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Noto_Sans } from 'next/font/google'
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
  
 const inter = Inter({ subsets: ['latin'] })
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: "--noto_sans" });
@@ -23,6 +24,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
