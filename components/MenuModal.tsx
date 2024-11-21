@@ -1,6 +1,5 @@
 "use client"
 import { motion } from "framer-motion"
-import Anchor from "./Anchor"
 import Button from "./Button"
 import { useRouter } from "next/navigation"
 
@@ -16,7 +15,7 @@ const framerText = (delay: number) => {
     initial: { opacity: 0, x: -50 },
     animate: { opacity: 1, x: 0 },
     transition: {
-      delay: 0.5 + delay / 10,
+      delay: 0.2 + delay / 10,
     },
   }
 }
@@ -41,10 +40,10 @@ export default function MenuModal({ setMenuAction }: MenuModalProps) {
       className="w-full h-[calc(100vh-70px)] fixed top-[70px] bg-[#4A4A4A] z-10"
       {...framerSidebarPanel}
     >
-      <ul className="flex flex-col text-[16px] text-white gap-y-5 pl-5 pt-5">
+      <ul className="flex flex-col text-[16px] text-white">
         {nav.map((item, index) => (
           <li key={index}>
-            <Button onClick={activate}>
+            <Button onClick={activate} className="w-full h-10 hover:bg-[#272727] text-left px-5">
               <motion.span
                 {...framerText(index)} 
               >
