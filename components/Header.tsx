@@ -9,7 +9,7 @@ export default function Header() {
   const [menu, setMenu] = useState(false); 
 
   return (
-    <header className="w-full h-[70px] flex justify-center fixed top-0 z-10">
+    <header className="w-full h-[70px] flex justify-center fixed top-0 z-20">
       <AnimatePresence>
         {menu && <MenuModal setMenuAction={setMenu}/>}
       </AnimatePresence>
