@@ -26,7 +26,6 @@ export default function Headline() {
               whileInView={{
                 scaleX: 1,
                 transition: {
-                  delay: 0.3,
                   type: "spring",
                   bounce: 0.4,
                   duration: 2
@@ -40,7 +39,7 @@ export default function Headline() {
           </div>
           <div className="h-[200px] mt-8 px-5 w-full md:w-[600px] md:px-0 leading-7 font-noto-sans md:mt-16 relative">
             <ArrowMark />
-            <p>Crank Motor Werkes offer a wide range of services, including custom turbo kits, in-house parts, tuning packages, and dyno hire.  Whether you need turbo upgrades, custom tuning, or performance modifications, Crank Motor Werkes provides tailored solutions for serious power enthusiasts</p>
+            <p>Crank Motor Werkes offers a wide range of services, including custom turbo kits, in-house parts, tuning packages, and dyno hire.  Whether you need turbo upgrades, custom tuning, or performance modifications, Crank Motor Werkes provides tailored solutions for serious power enthusiasts.</p>
           </div>
           <ul className="h-5 w-full flex flex-wrap overflow-hidden justify-center xl:justify-start gap-x-16 text-[#9B9B9B] mt-16 md:mt-2 font-bold whitespace-nowrap">
             {links.map(item => {
