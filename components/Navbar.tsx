@@ -34,7 +34,7 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
 
   useEffect(() => {
     const activateScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight);
+      setIsScrolled(window.scrollY > window.innerHeight - 120);
     }
 
     const activateWindow = () => {
