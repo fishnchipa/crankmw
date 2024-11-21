@@ -2,13 +2,16 @@ import Product from "./Product";
 import Anchor from "./Anchor";
 import Button from "./Button";
 
-export default function ProductLanding() {
+type ProductLandingProps = {
+  title: string
+}
+export default function ProductLanding({title}: ProductLandingProps) {
 
 
   return (
-    <div className="flex flex-col gap-y-3 px-10 lg:px-[200px]">
+    <div className="flex flex-col gap-y-3 px-10 lg:px-[200px] mt-16">
       <Anchor href="/" className="w-fit hover:underline text-moody-gray font-semibold decoration-[3px]" >
-        <h1 className="text-[#4A4A4A] text-[25px] sm:text-[30px] xl:text-[34px]">Hot Products</h1>
+        <h1 className="text-[#4A4A4A] text-[25px] sm:text-[30px] xl:text-[34px]">{title}</h1>
       </Anchor>
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full sm:gap-x-5 gap-y-10">
         <Product title='5" CMW B58 Catless Downpipe' price={13} sale={{discount: 40}}/>
