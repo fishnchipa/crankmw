@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
-import Button from "./Button"
 import { useRouter } from "next/navigation"
+import Button from "../Button"
 
 const framerSidebarPanel = {
   initial: { x: '-100%' },

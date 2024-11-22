@@ -1,20 +1,41 @@
 "use client"
 
-import Selector from "@/components/Selector";
-import ShoppingCart from "@/components/ShoppingCart";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Anchor from "./Anchor";
-import Button from "./Button";
 import MenuButton from "./MenuButton";
+import Anchor from "../Anchor";
+import Selector from "./Selector";
+import ShoppingCart from "../icons/ShoppingCart";
+import Button from "../Button";
+import { useNavbar } from "@/hooks/useNavbar";
 
 type NavbarProps = {
   setMenuAction: React.Dispatch<React.SetStateAction<boolean>>
   menu: boolean
 }
 
-const nav = ["Home", "Products", "Tuning", "Contact", "Search"]
+const nav = [
+  {
+    title: "Home",
+    src: "/"
+  }, 
+  {
+    title: "Products",
+    src: "/products"
+  },
+  {
+    title: "Tuning",
+    src: "/tuning"
+  },
+  {
+    title: "Contact",
+    src: "/contact"
+  },
+  {
+    title: "Search",
+    src: "/"
+  }
+]
 
 const iconAnimate = {
   initial: { opacity: 0 },
@@ -27,43 +48,16 @@ const iconAnimate = {
 }
 
 export default function Navbar({ menu, setMenuAction }: NavbarProps) {
-  const [selector, setSelector] = useState({ left: 0, width: 0 });
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isWindow, setIsWindow] = useState(false);
-  const [isBurger, setIsBurger] = useState(false);
 
-  useEffect(() => {
-    const activateScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight - 120);
-    }
-
-    const activateWindow = () => {
-      setIsWindow(window.innerWidth <= 768);
-      setIsBurger(window.innerWidth <= 550);
-      if (window.innerWidth > 550) {
-        setMenuAction(false);
-      }
-    }
-
-    activateScroll();
-    activateWindow();
-    window.addEventListener("scroll", activateScroll);
-    window.addEventListener("resize", activateWindow);
-
-    return () => {
-      window.removeEventListener("scroll", activateScroll);
-      window.removeEventListener("resize", activateWindow);
-    }
-  }, [setMenuAction])
-
-  const handleHover = (event: React.MouseEvent<HTMLLIElement>) => {
-    const { offsetLeft, offsetWidth } = event.currentTarget;
-    setSelector({ left: offsetLeft, width: offsetWidth });
-  };
-
-  const toggleHamburger = () => {
-    setMenuAction(prev => !prev);
-  }
+  const {
+    isWindow,
+    isScrolled,
+    isBurger,
+    selector,
+    handleHover,
+    toggleHamburger,
+    switchSelector
+  } = useNavbar(setMenuAction);
 
   return (
     <nav 
@@ -90,14 +84,15 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
             </div>
           </motion.div>
         }
-        <ul className="h-full flex flex-row items-center gap-x-10 relative font-noto-sans font-normal text-white">
+        <ul className="h-full flex flex-row items-center relative font-noto-sans font-normal text-white">
           {nav.map(item => (
             <li
               onMouseEnter={handleHover}
-              className="relative"
-              key={item}
+              onMouseLeave={switchSelector}
+              className="relative px-5"
+              key={item.title}
             >
-              <Anchor href="/">{item}</Anchor>
+              <Anchor href={item.src}>{item.title}</Anchor>
             </li>
           ))}
           <Selector 
