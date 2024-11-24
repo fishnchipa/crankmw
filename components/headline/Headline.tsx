@@ -1,9 +1,9 @@
 "use client"
 
+import Anchor from "../Anchor";
+import ArrowMark from "../icons/ArrowMark";
 import HeadlineBackDrop from "./HeadlineBackDrop";
 import { motion } from "framer-motion";
-import Anchor from "./Anchor";
-import ArrowMark from "./icons/ArrowMark";
 
 const links = ["HOT PRODUCTS", "DOWNPIPES", "AIR INTAKES", "ENGINES", "RADIATORS", "DIFFUSERS"]
 

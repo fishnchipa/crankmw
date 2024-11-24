@@ -1,6 +1,6 @@
+import Anchor from "../Anchor";
+import Button from "../Button";
 import Product from "./Product";
-import Anchor from "./Anchor";
-import Button from "./Button";
 
 type ProductLandingProps = {
   title: string
