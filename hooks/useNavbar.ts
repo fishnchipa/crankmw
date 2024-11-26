@@ -12,29 +12,22 @@ export const useNavbar = (
   const pathname = usePathname();
 
   const switchSelector = useCallback(() => {
-    switch (pathname) {
-      case "/": 
-        setActive(false);
-        setSelector({ left: 20, width: 46 });
-        break;
-      case "/products":
-        setActive(true);
-        setSelector({ left: 106, width: 67 });
-        break;
-      case "/tuning": 
-        setActive(true);
-        setSelector({ left: 212, width: 52 });
-        break;
-      case "/contact": 
-        setActive(true);
-        setSelector({ left: 304, width: 58 });
-        break;
-      case "/search": 
-        setActive(true);
-        setSelector({ left: 402, width: 51 });
-        break;
-      default:
-        break;
+    console.log()
+    if (pathname === "/") { 
+      setActive(false);
+      setSelector({ left: 20, width: 46 });
+    } else if (pathname.startsWith("/products")) {
+      setActive(true);
+      setSelector({ left: 106, width: 67 });
+    } else if (pathname.startsWith("/tuning")) { 
+      setActive(true);
+      setSelector({ left: 212, width: 52 });
+    } else if (pathname.startsWith("/contact")) { 
+      setActive(true);
+      setSelector({ left: 304, width: 58 });
+    } else if (pathname.startsWith("/search")) { 
+      setActive(true);
+      setSelector({ left: 402, width: 51 });
     }
   }, [pathname, setSelector])
 
