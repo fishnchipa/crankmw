@@ -1,13 +1,11 @@
-"use client"
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import MenuButton from "./MenuButton";
 import Anchor from "../Anchor";
 import Selector from "./Selector";
 import ShoppingCart from "../icons/ShoppingCart";
 import Button from "../Button";
 import { useNavbar } from "@/hooks/useNavbar";
+import { motion } from "motion/react";
 
 type NavbarProps = {
   setMenuAction: React.Dispatch<React.SetStateAction<boolean>>
@@ -54,6 +52,7 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
     isScrolled,
     isBurger,
     selector,
+    active,
     handleHover,
     toggleHamburger,
     switchSelector
@@ -62,14 +61,14 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
   return (
     <nav 
       style={{
-        width: isWindow || isScrolled ? "100%" : "1000px",
-        clipPath: isWindow || isScrolled ? "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)" : "polygon(0% 0, 100% 0, 95% 100%, 5% 100%)",
-        background: isWindow || isScrolled ? "rgb(57, 58, 58)" : "rgba(17, 19, 20, 0.7)",
+        width: isWindow || isScrolled || active ? "100%" : "1000px",
+        clipPath: isWindow || isScrolled || active ? "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)" : "polygon(0% 0, 100% 0, 95% 100%, 5% 100%)",
+        background: isWindow || isScrolled || active ? "rgb(57, 58, 58)" : "rgba(17, 19, 20, 0.7)",
       }}
       className="transition-all duration-500"
     >
     {!isBurger ? <div className="w-full h-full flex items-center justify-between px-5 relative md:justify-center">
-        {(!isWindow && isScrolled) && 
+        {(!isWindow && (isScrolled || active)) && 
           <motion.div 
             className="absolute left-5"
             {...iconAnimate}
@@ -100,7 +99,7 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
             width={selector.width}
           />
         </ul>
-        {(isWindow || isScrolled) && 
+        {(isWindow || isScrolled || active) && 
           <motion.div 
             className="absolute right-5"
             {...iconAnimate}

@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import Anchor from "./Anchor";
+import Anchor from "../Anchor";
+import { motion } from "motion/react";
 
 type ProductProps = {
   title: string
@@ -14,7 +14,7 @@ type ProductProps = {
 
 export default function Product({title, price, sale}: ProductProps) {
   return (
-    <Anchor 
+    <Anchor
       className="flex flex-col items-center group text-center "
       href="/"
     >
@@ -39,7 +39,7 @@ export default function Product({title, price, sale}: ProductProps) {
           </div>
         }
       </div>
-      <div className="flex flex-col text-[#4A4A4A] items-center">
+      <div className="flex flex-col text-[#4A4A4A] items-center text-[16px]">
         <h1 className="text-black group-hover:underline">{title}</h1>
         <div className="flex flex-row font-semibold gap-x-5">
           {sale && <span className="text-red-500">${sale.discount.toFixed(2)}</span>}

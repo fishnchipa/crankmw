@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import MenuModal from "./MenuModal";
-import { AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
+import { AnimatePresence } from "motion/react";
 
 export default function Header() {
   const [menu, setMenu] = useState(false); 

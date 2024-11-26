@@ -1,8 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Banknote, FastForward, KeyRound } from "lucide-react"
 import Link from "next/link"
+import { motion } from "motion/react"
 
 
 const content = [
