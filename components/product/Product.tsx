@@ -16,7 +16,7 @@ export default function Product({title, price, sale}: ProductProps) {
   return (
     <Anchor
       className="flex flex-col items-center group text-center "
-      href="/"
+      href="/products/game"
     >
       <div className="w-full aspect-square rounded-2xl border-happy-gray border-[1px] relative overflow-hidden">
         <motion.div 
