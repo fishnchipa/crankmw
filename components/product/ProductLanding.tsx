@@ -23,7 +23,7 @@ export default function ProductLanding({title}: ProductLandingProps) {
       <Button 
         className="w-28 h-12 relative group overflow-hidden border-2 border-black hover:text-white mt-10"
       >
-        <span className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-400 ease-in-out"></span>
+        <span className="absolute inset-0 bg-black transform -translate-x-[calc(100%+1px)] group-hover:translate-x-0 transition-transform duration-400 ease-in-out"></span>
         <span className="relative">VIEW ALL</span>
       </Button>
 
