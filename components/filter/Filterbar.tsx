@@ -1,13 +1,11 @@
 "use client"
 
-import { useState } from "react";
 import Button from "../Button";
 import Dropdown from "./Dropdown";
 import Checkbox from "./Checkbox";
 import Price from "./Price";
 
 export default function Filterbar() {
-  const [filters, setFilters] = useState({})
   const clear = () => {
 
   }
