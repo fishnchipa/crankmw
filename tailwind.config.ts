@@ -1,3 +1,5 @@
+import forms from "@tailwindcss/forms";
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,7 +15,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        "noto-sans": ["var(--noto_sans)"]
+        "noto-sans": ["var(--noto_sans)"],
+  			"crimson": ["var(--font-crimson)"],
       },
       screens: {
         "xsm": "550px"
@@ -21,5 +24,7 @@ export default {
 
     },
   },
-  plugins: [],
+  plugins: [
+    forms
+  ],
 } satisfies Config;
