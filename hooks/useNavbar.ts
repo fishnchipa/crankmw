@@ -8,29 +8,40 @@ export const useNavbar = (
   const [isScrolled, setIsScrolled] = useState(false);
   const [isWindow, setIsWindow] = useState(false);
   const [isBurger, setIsBurger] = useState(false);
+  const [active, setActive] = useState(false);
   const pathname = usePathname();
 
   const switchSelector = useCallback(() => {
     switch (pathname) {
       case "/": 
+        setActive(false);
         setSelector({ left: 20, width: 46 });
         break;
       case "/products":
+        setActive(true);
         setSelector({ left: 106, width: 67 });
         break;
       case "/tuning": 
+        setActive(true);
         setSelector({ left: 212, width: 52 });
         break;
       case "/contact": 
+        setActive(true);
         setSelector({ left: 304, width: 58 });
         break;
       case "/search": 
+        setActive(true);
         setSelector({ left: 402, width: 51 });
         break;
       default:
         break;
     }
   }, [pathname, setSelector])
+
+  useEffect(() => {
+    
+
+  })
 
   useEffect(() => {
     const activateScroll = () => {
@@ -74,6 +85,7 @@ export const useNavbar = (
     isBurger,
     handleHover,
     toggleHamburger,
-    switchSelector
+    switchSelector,
+    active
   }
 }
