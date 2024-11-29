@@ -12,7 +12,7 @@ export default function Home() {
           <span>{3} Results</span>
         </div>
 
-        <div className="w-full mt-10 flex flex-row gap-x-10">
+        <div className="w-full mt-10 flex gap-x-10">
           <Filterbar />
           <ProductSection />
         </div>
