@@ -28,6 +28,9 @@ export const useNavbar = (
     } else if (pathname.startsWith("/search")) { 
       setActive(true);
       setSelector({ left: 402, width: 51 });
+    } else if (pathname.startsWith("/cart")) {
+      setActive(true);
+      setSelector({ left: 0, width: 0 });
     }
   }, [pathname, setSelector])
 
