@@ -104,7 +104,7 @@ export default function Navbar({ menu, setMenuAction }: NavbarProps) {
             className="absolute right-5"
             {...iconAnimate}
           >
-            <Anchor href="/">
+            <Anchor href="/cart">
               <ShoppingCart />
             </Anchor>  
           </motion.div>
