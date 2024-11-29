@@ -45,21 +45,21 @@ export default function TuneDesc() {
     <div className="flex flex-col gap-y-5">
       {content.map((item, key) => {
         return (
-          <section key={key} className="flex max-w-[500px] flex-row items-center gap-x-5 ">
+          <section key={key} className="flex max-w-[600px] flex-row items-center gap-x-5">
             <div className="min-w-[35px] min-h-[35px]">
               {image(item.img)}
             </div>
             <div className="flex flex-col">
               <Link href="/">
                 <motion.h3 
-                  className="text-[#FFB000] text-[18px] font-semibold hover:underline underline-offset-4"
+                  className="text-[#FFB000] text-[24px] font-semibold hover:underline underline-offset-4"
                   whileHover={{ translateX: 15 }}
                   transition={{ delay:0.1, type:"just", duration: 0.3 }}
                 >
                   {item.heading}
                 </motion.h3>
               </Link>
-              <p className="text-[#686868] text-[12px]">{item.desc}</p>
+              <p className="text-[#686868] text-[16px]">{item.desc}</p>
             </div>
           </section>
         )
