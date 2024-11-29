@@ -23,7 +23,6 @@ export default function ProductQuantity({id, title, price}: ProductQuantityProps
   } as CartProduct
 
   const onSubmit = () => {
-    
     try {
       const cart = window.localStorage.getItem("cart-items");
       if (cart) {

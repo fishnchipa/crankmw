@@ -1,11 +1,11 @@
-import { Item } from "@/lib/types"
+import { Item } from "@/lib/types/product"
 
 type ProductContentProps = {
   title: string,
-  sku: number,
+  sku: string,
   price: number,
-  discount: number
   content: Item[]
+  discount?: number
 }
 
 export default function ProductContent({ title, sku, price, discount, content }: ProductContentProps) {
