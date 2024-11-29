@@ -17,7 +17,7 @@ export default function Brand() {
         <h1 className="text-[34px] font-bold text-center">Trusted By Leading Brands</h1>
         <span className="text-[16px]">Product for all your tuning needs</span>
       </div> 
-      <div className="h-fit w-full flex flex-row justify-center">
+      <div className="h-fit w-full flex justify-center">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
