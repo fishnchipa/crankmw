@@ -13,7 +13,7 @@ export default function ReviewSection() {
 
 
   return (
-    <div className="w-full h-[826px] flex justify-center bg-[#494949] pt-5 relative overflow-hidden mt-60">
+    <div className="w-full h-[826px] flex justify-center bg-gradient-to-t from-[#494949] bg-[#363636] pt-5 relative overflow-hidden mt-60">
       <Ellipse className="absolute bottom-0"/>
       <div className="w-full px-5 xl:w-[1206px]">
         <section className="text-white">
