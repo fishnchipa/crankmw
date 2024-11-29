@@ -22,7 +22,7 @@ export default function Filterbar() {
         </Button>
       </div>
       <hr className="border border-[#D1D1D1]"/>
-      <div className="flex flex-col gap-y-3 mt-5">
+      <div className="flex flex-col gap-y-3 mt-3">
         <Dropdown 
           label="Avaliability"
         >
@@ -56,8 +56,6 @@ export default function Filterbar() {
           <Checkbox label="GiroDisc" amount={5}/> 
         </Dropdown>
       </div>
-
-        
     </div>
   )
 }

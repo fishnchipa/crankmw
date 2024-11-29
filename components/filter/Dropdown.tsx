@@ -25,7 +25,7 @@ export default function Dropdown({
   return (
     <div className={cn("w-full", className)}>
       <Button 
-        className="flex flex-row items-center justify-between text-[24px] font-semibold w-full text-[#4A4A4A]"
+        className="flex flex-row items-center justify-between text-[20px] font-semibold w-full text-[#4A4A4A]"
         onClick={() => setActive(prev => !prev)}
       >
         {label}
