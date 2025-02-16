@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
-import Button from "../Button";
 
 const framerSidebarPanel = {
   initial: { x: "-100%" },

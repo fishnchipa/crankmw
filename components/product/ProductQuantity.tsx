@@ -16,7 +16,7 @@ export default function ProductQuantity({ id }: ProductQuantityProps) {
   const checkout = async (formData: FormData) => {
     setLoading(true);
 
-    const response = await checkoutProduct(formData, id);
+    await checkoutProduct(formData, id);
     setLoading(false);
   };
 
@@ -27,7 +27,7 @@ export default function ProductQuantity({ id }: ProductQuantityProps) {
     >
       <h1>QUANTITY</h1>
       <Quantity quantity={{ value, setValue }} />
-      <Button label="ADD TO CART" type="submit" className="mt-5" />
+      <Button label="ADD TO CART" type="submit" className="mt-5" loading={loading}/>
     </form>
   );
 }

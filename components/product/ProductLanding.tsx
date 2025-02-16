@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Anchor from "../Anchor";
 import Button from "../Button";
 import Product from "./Product";
 
@@ -18,10 +17,10 @@ export default function ProductLanding({ title }: ProductLandingProps) {
         </h1>
       </Link>
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full sm:gap-x-5 gap-y-10">
-        <Product title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
-        <Product title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
-        <Product title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
-        <Product title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
+        <Product name="" title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
+        <Product name="" title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
+        <Product name="" title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
+        <Product name="" title='5" CMW B58 Catless Downpipe' price={13} discount={10} />
       </div>
       <div className="w-full flex justify-center items-center">
         <div className="w-[128px]">
