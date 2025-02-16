@@ -1,52 +1,50 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Swiper, SwiperSlide } from "swiper/react"
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import '@/styles/carousel.css'
+import "swiper/css";
+import "swiper/css/autoplay";
+import "@/styles/carousel.css";
 import { Autoplay } from "swiper/modules";
 
 const media = [
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
-  },
-  {
-
-    src: "/review1.png",
-    alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
   {
     src: "/review1.png",
     alt: "logo",
-    link: "/cart"
+    link: "/cart",
   },
-]
-
+  {
+    src: "/review1.png",
+    alt: "logo",
+    link: "/cart",
+  },
+];
 
 export default function MediaCarousel() {
   return (
@@ -62,33 +60,29 @@ export default function MediaCarousel() {
         autoplay={{
           delay: 0,
         }}
-        breakpoints={
-          {
-            1280: {
-              slidesPerView: 4
-            },
+        breakpoints={{
+          1280: {
+            slidesPerView: 4,
+          },
 
-            640: {
-              slidesPerView: 3
-            },
-            400: {
-              slidesPerView: 2
-            }
-          }
-        }
+          640: {
+            slidesPerView: 3,
+          },
+          400: {
+            slidesPerView: 2,
+          },
+        }}
       >
         {media.map((item, key) => {
           return (
             <SwiperSlide key={key}>
               <div className="w-full h-full flex justify-center items-center">
-                <Image alt={item.src} src={item.src} width={300} height={300}/>
+                <Image alt={item.src} src={item.src} width={300} height={300} />
               </div>
             </SwiperSlide>
-          )
+          );
         })}
       </Swiper>
     </div>
-  )
+  );
 }
-
-

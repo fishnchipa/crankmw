@@ -1,11 +1,9 @@
-.swiper-button-next, .swiper-button-prev {
-   color: #FFD12E;
-   font-weight: bold;
-   margin-top: 160px;
-
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffd12e;
+  font-weight: bold;
+  margin-top: 160px;
 }
-
-
 
 @media (max-width: 640px) {
   .swiper-button-prev,
@@ -13,5 +11,3 @@
     display: none;
   }
 }
-
-

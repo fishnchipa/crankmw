@@ -14,9 +14,9 @@ export default function Home() {
         <Video />
         <Brand />
         <Headline />
-        <ProductLanding title="HOT PRODUCTS"/>
-        <ProductLanding title="DOWNPIPES"/>
-        <ProductLanding title="AIR INTAKES"/>
+        <ProductLanding title="HOT PRODUCTS" />
+        <ProductLanding title="DOWNPIPES" />
+        <ProductLanding title="AIR INTAKES" />
         <div className="flex justify-center items-center w-full mt-[200px] relative">
           <TuneBackDrop />
           <TuneSection />

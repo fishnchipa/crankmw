@@ -16,15 +16,12 @@ export default {
       },
       fontFamily: {
         "noto-sans": ["var(--noto_sans)"],
-  			"crimson": ["var(--font-crimson)"],
+        crimson: ["var(--font-crimson)"],
       },
       screens: {
-        "xsm": "550px"
-      }
-
+        xsm: "550px",
+      },
     },
   },
-  plugins: [
-    forms
-  ],
+  plugins: [forms],
 } satisfies Config;

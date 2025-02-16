@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { useState } from "react"
+import Image from "next/image";
+import { useState } from "react";
 
 export type ProductImage = {
-  src: string,
-  alt: string
-}
+  image: string;
+  alt: string;
+};
 
 type ProductPreviewProps = {
-  preview: ProductImage[]
-}
+  preview: ProductImage[];
+};
 
 export default function ProductPreview({ preview }: ProductPreviewProps) {
   const [active, setActive] = useState(0);
@@ -20,34 +20,30 @@ export default function ProductPreview({ preview }: ProductPreviewProps) {
       <div className="flex flex-col gap-y-[10px]">
         {preview.map((view, index) => {
           return (
-            <div 
-              className="flex items-center justify-center relative w-[130px] h-[100px]
-              border border-black rounded-md bg-white" 
-              key={index} 
+            <div
+              className={`flex items-center justify-center relative w-[130px] h-[100px] border rounded-md bg-white overflow-hidden ${active === index ? "border-[#FAA500]" : "border"}`}
+              key={index}
             >
-              <button
-                onClick={() => setActive(index)}
-              >
+              <button onClick={() => setActive(index)}>
                 <Image
-                  src={view.src}
+                  src={view.image}
                   alt={view.alt}
-                  fill
-                  className="object-cover rounded-md"
+                  width={130}
+                  height={100}
                 />
               </button>
             </div>
-          )
-        })} 
+          );
+        })}
       </div>
       <div className="w-full rounded-md relative">
-        <Image 
-          src={preview[active].src}
+        <Image
+          src={preview[active].image}
           alt={preview[active].alt}
           fill
-          className="object-cover"
+          className="object-contain"
         />
       </div>
     </div>
-  )
+  );
 }
-

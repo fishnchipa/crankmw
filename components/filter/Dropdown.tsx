@@ -1,17 +1,15 @@
-"use client"
+"use client";
 
-import { ChevronDown, ChevronUp } from "lucide-react"
-import Button from "../Button"
-import { useState } from "react"
-import { cn } from "@/lib/utils"
-
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 type DropdownProps = {
-  label: string,
-  children?: React.ReactNode,
-  isOpen?: boolean,
-  className?: string
-}
+  label: string;
+  children?: React.ReactNode;
+  isOpen?: boolean;
+  className?: string;
+};
 
 export default function Dropdown({
   label,
@@ -19,23 +17,18 @@ export default function Dropdown({
   className,
   isOpen = false,
 }: DropdownProps) {
-  const [active, setActive] = useState(isOpen) 
-  
+  const [active, setActive] = useState(isOpen);
 
   return (
     <div className={cn("w-full", className)}>
-      <Button 
+      <button
         className="flex flex-row items-center justify-between text-[20px] font-semibold w-full text-[#4A4A4A]"
-        onClick={() => setActive(prev => !prev)}
+        onClick={() => setActive((prev) => !prev)}
       >
         {label}
         {active ? <ChevronUp /> : <ChevronDown />}
-      </Button>
-      {active && 
-        <div className="flex flex-col gap-y-2 p-2">
-          {children}
-        </div>
-      }
-    </div> 
-  )
+      </button>
+      {active && <div className="flex flex-col gap-y-2 p-2">{children}</div>}
+    </div>
+  );
 }

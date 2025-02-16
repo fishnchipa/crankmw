@@ -1,27 +1,27 @@
-import { ProductType } from "./types/product"
+import { ProductType } from "./types/product";
 
 export const brands = [
   {
     src: "/11562_300x300.webp",
-    alt: "logo eventuri"
+    alt: "logo eventuri",
   },
   {
-    src:"/apr_logo_2018_rgb_red_300x300.png",
-    alt: "logo apr"
+    src: "/apr_logo_2018_rgb_red_300x300.png",
+    alt: "logo apr",
   },
   {
     src: "/BC_FORG_300x300.png",
-    alt: "bc forg logo"
+    alt: "bc forg logo",
   },
   {
     src: "/Untitled_design_6_300x300.png",
-    alt: "logo design"
+    alt: "logo design",
   },
   {
     src: "/Untitled_design_6_300x300.png",
-    alt: "logo design"
-  }
-]
+    alt: "logo design",
+  },
+];
 
 export const reviews = [
   {
@@ -52,37 +52,44 @@ export const reviews = [
     alt: "car",
     desc: "\“ I recently had the pleasure of getting my car tuned with APR Stage 2, and I must say, it has been an absolute game-changer. I wanted to share my experience and express my utmost satisfaction with the results. The transformation this tuning has brought to my car is nothing short of remarkable. \“",
   },
-]
-
+];
 
 export const productData = {
   id: "1",
   title: "5″ CMW B58 CATLESS DOWNPIPE",
   sku: "2",
-  price: 720.00,
+  price: 720.0,
   discount: 950,
   preview: [
     {
       src: "/eve.webp",
-      alt: "crank"
+      alt: "crank",
     },
     {
       src: "/eve.webp",
-      alt: "crank"
-    }
+      alt: "crank",
+    },
   ],
   content: [
     {
       type: "text",
-      value: "Increase performance and reduce back-pressure with a high-flow CMW Downpipe. Faster spool, increased power, and a more aggressive exhaust note. Using a cast French head to 5″ downpipe, Handcrafted 304 Stainless Steel construction. "
+      value:
+        "Increase performance and reduce back-pressure with a high-flow CMW Downpipe. Faster spool, increased power, and a more aggressive exhaust note. Using a cast French head to 5″ downpipe, Handcrafted 304 Stainless Steel construction. ",
     },
     {
       type: "list",
-      value: ["Catless", "Cast French Head", "Gains from 20-25hp with the tune", "Heat Shield", "Fitment guaranteed"]
+      value: [
+        "Catless",
+        "Cast French Head",
+        "Gains from 20-25hp with the tune",
+        "Heat Shield",
+        "Fitment guaranteed",
+      ],
     },
     {
       type: "text",
-      value: "Back pressure is significantly reduced by eliminating the restrictive catalytic converter in the factory downpipe with our catless which results in a faster spool, an increase in power & a more aggressive exhaust note. Our downpipe features a full 5″ stainless steel design as well as a CNC 304 grade stainless steel flange that offers a smooth transition from the turbo to the mid pipes. "
-    }
-  ]
-} as ProductType
+      value:
+        "Back pressure is significantly reduced by eliminating the restrictive catalytic converter in the factory downpipe with our catless which results in a faster spool, an increase in power & a more aggressive exhaust note. Our downpipe features a full 5″ stainless steel design as well as a CNC 304 grade stainless steel flange that offers a smooth transition from the turbo to the mid pipes. ",
+    },
+  ],
+} as ProductType;

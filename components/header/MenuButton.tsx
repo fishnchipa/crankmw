@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { motion } from "motion/react";
 
-interface Props {
-  width?: number,
-  height?: number,
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  width?: number;
+  height?: number;
   isOpen?: boolean;
   color?: string;
   strokeWidth?: string | number;
@@ -21,30 +21,30 @@ export default function MenuButton({
   const top = {
     closed: {
       rotate: 0,
-      translateY: 0
+      translateY: 0,
     },
     opened: {
       rotate: 45,
-      translateY: 2
-    }
+      translateY: 2,
+    },
   };
   const center = {
     closed: {
-      opacity: 1
+      opacity: 1,
     },
     opened: {
-      opacity: 0
-    }
+      opacity: 0,
+    },
   };
   const bottom = {
     closed: {
       rotate: 0,
-      translateY: 0
+      translateY: 0,
     },
     opened: {
       rotate: -45,
-      translateY: -2
-    }
+      translateY: -2,
+    },
   };
   const lineProps = {
     stroke: color,
@@ -54,7 +54,7 @@ export default function MenuButton({
     animate: variant,
   };
   const unitHeight = 4;
-  const unitWidth = (unitHeight * (width)) / (height);
+  const unitWidth = (unitHeight * width) / height;
 
   return (
     <motion.svg
@@ -96,5 +96,4 @@ export default function MenuButton({
       />
     </motion.svg>
   );
-};
-
+}
