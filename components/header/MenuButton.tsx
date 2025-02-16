@@ -15,7 +15,6 @@ export default function MenuButton({
   height = 13,
   strokeWidth = 1.5,
   color = "#ffffff",
-  ...props
 }: Props) {
   const variant = isOpen ? "opened" : "closed";
   const top = {
@@ -65,7 +64,6 @@ export default function MenuButton({
       height={height}
       role="svg"
       aria-label="Edit hamburger icon"
-      {...props}
     >
       <motion.line
         role="line"
